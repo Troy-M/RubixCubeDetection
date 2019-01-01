@@ -1,0 +1,7 @@
+cmake_minimum_required(VERSION 2.8)
+project( RubixCubeDetection )
+add_compile_options(-std=c++11)
+find_package( OpenCV REQUIRED )
+find_package(Curses REQUIRED)
+add_executable( RubixCubeDetection main.cpp Tile.h Tile.cpp)
+target_link_libraries( RubixCubeDetection ${OpenCV_LIBS} ${CURSES_LIBRARIES} )
